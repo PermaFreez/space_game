@@ -1,9 +1,9 @@
 mod walls;
 mod player;
 mod izone;
+mod interact;
 
 use bevy::prelude::*;
-
 
 fn main() {
     let mut app = App::new();
@@ -16,7 +16,7 @@ fn main() {
     
     app.add_system(player::main)
         .add_system(walls::main)
-        .add_system(izone::check_zone);
+        .add_system(interact::main);
 
     app.run();
 }
